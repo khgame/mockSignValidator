@@ -1,5 +1,11 @@
 # mockSignValidator
 
+[![Npm Package](https://img.shields.io/npm/v/@khgame/mock-sign-validator.svg?style=flat)](https://img.shields.io/npm/v/@khgame/mock-sign-validator.svg?style=flat)
+![NPM](https://img.shields.io/npm/l/@khgame/mock-sign-validator.svg?color=purple)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/khgame/mockSignValidator/master.svg?color=purple)
+![GitHub stars](https://img.shields.io/github/stars/khgame/mockSignValidator.svg?color=blue)
+![npm (tag)](https://img.shields.io/npm/v/@khgame/mock-sign-validator/latest.svg?color=blue)
+
 mockSignValidator is mock library of validator,  
 which can be used to simplify the test environment of validation. 
 
@@ -9,8 +15,8 @@ which can be used to simplify the test environment of validation.
     `npm i -g @khgame/mock-sign-validator`
     
 - project:  
-    `npm i --save @khgame//mock-sign-validator` or  
-    `yarn add @khgame//mock-sign-validator`
+    `npm i --save @khgame/mock-sign-validator` or  
+    `yarn add @khgame/mock-sign-validator`
 
 ## run
 
