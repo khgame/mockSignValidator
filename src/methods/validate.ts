@@ -5,5 +5,5 @@ export const validate = async (data: {
     secret: string,
     algorithm: string
 }) => {
-    return true;
+    return data.secret === (data.loginToken + "_sign");
 }

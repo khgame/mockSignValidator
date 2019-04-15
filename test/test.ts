@@ -16,8 +16,8 @@ describe('validate', function () {
             .send({
                 "validatorIdentity": "dark_hole",
                 "userIdentity": "the_mock_user",
-                "loginToken": "i_have_no_idea",
-                "secret": "the_encrypted_data",
+                "loginToken": "the_login_token",
+                "secret": "the_login_token_sign",
                 "algorithm": "monkey_encode"
             })
             .expect('Content-Type', /json/)
@@ -28,6 +28,28 @@ describe('validate', function () {
                 }
                 assert.equal(res.body.statusCode, 200);
                 assert.equal(res.body.result, true);
+                done();
+            })
+    });
+
+    it('mock data returned', function (done) {
+        request(server).post('/validate')
+            .set('Accept', 'application/json')
+            .send({
+                "validatorIdentity": "dark_hole",
+                "userIdentity": "the_mock_user",
+                "loginToken": "i_have_no_idea",
+                "secret": "wrong_encrypted_data",
+                "algorithm": "monkey_encode"
+            })
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end(function (err, res) {
+                if (err) {
+                    done(err);
+                }
+                assert.equal(res.body.statusCode, 200);
+                assert.equal(res.body.result, false);
                 done();
             })
     });
